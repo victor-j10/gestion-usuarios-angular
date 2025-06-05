@@ -1,0 +1,107 @@
+.login-wrapper {
+  background-color: #fef8f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 1rem; 
+}
+
+.login-card {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.login-left {
+  flex: 1;
+  background-color: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+
+  img {
+    width: 100% !important;
+  }
+}
+
+.login-right {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+
+  .login-container {
+    width: 100%;
+
+    h2 {
+      margin-bottom: 0.5rem;
+      color: #2c2c2c;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    .full-width {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    ::ng-deep .mat-form-field {
+      width: 100%;
+
+      .mat-form-field-label {
+        color: #999;
+      }
+
+      .mat-input-element {
+        color: #2c2c2c;
+      }
+
+      .mat-form-field-underline {
+        background-color: #ccc;
+      }
+
+      .mat-form-field-ripple {
+        background-color: #7fb800;
+      }
+
+      .mat-focused .mat-form-field-label {
+        color: #7fb800 !important;
+      }
+    }
+
+    button {
+      background-color: #0096bb !important;
+      color: #ffffff !important;
+      font-weight: bold;
+      padding: 0.8rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0096bb  !important;
+      }
+    }
+
+    
+
+
+    .error {
+      color: #d32f2f;
+      margin-top: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}

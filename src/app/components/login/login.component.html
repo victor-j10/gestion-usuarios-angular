@@ -1,0 +1,27 @@
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="login-left">
+            <img src="assets/images/Osito-grizzly-manage2.png" alt="Bear" />
+        </div>
+        <div class="login-right">
+            <div class="login-container">
+                <h2 style="text-align: center;">¡Bienvenido!</h2>
+                <p style="text-align: center;">Por favor inicia sesión para continuar</p>
+                <form (ngSubmit)="login()">
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput [(ngModel)]="username" name="username" required />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" [(ngModel)]="password" name="password" required />
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" class="full-width">Iniciar Sesión</button>
+                </form>
+                <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+            </div>
+        </div>
+    </div>
+</div>
