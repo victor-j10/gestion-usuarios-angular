@@ -13,7 +13,7 @@ export interface User {
   providedIn: 'root'
 })
 export class UserService {
-  private API_URL = 'http://localhost:3000/users';
+  private API_URL = 'assets/db.json';
 
   constructor(private http: HttpClient) { }
 
