@@ -1,27 +1,44 @@
-# AngularUserApp
+# Gestión de Usuarios - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Esta aplicación web desarrollada en **Angular** permite gestionar usuarios, tras loguearse, con navegación protegida y vistas dinámicas. Además, se pueden revisar los detalles de un usuario seleccionado.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Inicio de sesión con autenticación local
+- Listado de usuarios con tabla interactiva
+- Vista detallada de cada usuario
+- Navbar con nombre del usuario logueado y botón de logout
+- Protección de rutas mediante **guards**
+- Diseño moderno con **Angular Material**
 
-## Code scaffolding
+## Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- TypeScript
+- SCSS
 
-## Build
+## 📦 Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clonar el repositorio:
 
-## Running unit tests
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Instalar las dependencias:
+   
+```bash
+npm install
+```
 
-## Running end-to-end tests
+3. Correr el servidor:
+   
+```bash
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
