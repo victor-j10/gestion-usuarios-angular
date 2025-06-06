@@ -7,9 +7,11 @@ Esta aplicación web desarrollada en **Angular** permite gestionar usuarios, tra
 - Inicio de sesión con autenticación local
 - Listado de usuarios con tabla interactiva
 - Vista detallada de cada usuario
-- Navbar con nombre del usuario logueado y botón de logout
+- SideBar con nombre del usuario logueado, botón home y botón de logout
 - Protección de rutas mediante **guards**
 - Diseño moderno con **Angular Material**
+- Datos simulados desde un JSON (assets/db.json)
+- Ruteo con rutas hijas (/users y /users/:id)
 
 ## Tecnologías
 
@@ -17,6 +19,8 @@ Esta aplicación web desarrollada en **Angular** permite gestionar usuarios, tra
 - [Angular Material](https://material.angular.io/)
 - TypeScript
 - SCSS
+- RxJS
+- Vercel
 
 ## 📦 Instalación
 
@@ -38,6 +42,28 @@ npm install
 ```bash
 ng serve
 ```
+
+## Despliegue
+
+Esta aplicación se puede desplegar en vercel con fácilidad. Solo debes asegurarte de tener en la raíz del proyecto tu archivo vercel.json con el siguiente contenido:
+
+```bash
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
+
+## Notas
+
+- El login es simulado, por lo que se puede realizar el acceso mediante credenciales ficticias.
+- La forma en la que se loguea el usuario es con el email y su password
+- Los datos se cargan desde un archivo JSON local que simula un servidor ficticio
+
+## Autor
+
+Desarrollado por Victor Hernandez como parte de una prueba técnica.
 
 
 
