@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  username = '';
+  email = '';
   password = '';
   errorMessage = '';
   loading = false;
@@ -29,7 +29,7 @@ export class LoginComponent {
     this.http.get<{ users: any[] }>('assets/db.json').subscribe({
       next: (data) => {
         const user = data.users.find(
-          u => u.username === this.username && u.password === this.password
+          u => u.email === this.email && u.password === this.password
         );
         if (user) {
           localStorage.setItem('user', JSON.stringify(user));
