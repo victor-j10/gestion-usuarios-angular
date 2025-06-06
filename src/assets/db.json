@@ -1,6 +1,84 @@
 {
   "users": [
-    { "id": 1, "username": "admin", "password": "1234", "email": "admin@example.com", "name": "Admin User", "role": "admin"},
-    { "id": 2, "username": "victor", "password": "4567", "email": "victor@example.com", "name": "Víctor Hernández", "role": "user" }
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234",
+      "email": "admin@example.com",
+      "name": "Admin User",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "victor",
+      "password": "4567",
+      "email": "victor@example.com",
+      "name": "Víctor J",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "carla",
+      "password": "pass123",
+      "email": "carla@example.com",
+      "name": "Carla Gómez",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "username": "luis",
+      "password": "qwerty",
+      "email": "luis@example.com",
+      "name": "Luis Rodríguez",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "username": "maria",
+      "password": "abcd1234",
+      "email": "maria@example.com",
+      "name": "María Fernández",
+      "role": "user"
+    },
+    {
+      "id": 6,
+      "username": "sofia",
+      "password": "sofia2024",
+      "email": "sofia@example.com",
+      "name": "Sofía Ramírez",
+      "role": "user"
+    },
+    {
+      "id": 7,
+      "username": "diego",
+      "password": "diego789",
+      "email": "diego@example.com",
+      "name": "Diego Torres",
+      "role": "user"
+    },
+    {
+      "id": 8,
+      "username": "lucia",
+      "password": "lucia456",
+      "email": "lucia@example.com",
+      "name": "Lucía Mendoza",
+      "role": "user"
+    },
+    {
+      "id": 9,
+      "username": "pedro",
+      "password": "pedro321",
+      "email": "pedro@example.com",
+      "name": "Pedro Castillo",
+      "role": "user"
+    },
+    {
+      "id": 10,
+      "username": "ana",
+      "password": "ana111",
+      "email": "ana@example.com",
+      "name": "Ana Morales",
+      "role": "user"
+    }
   ]
 }

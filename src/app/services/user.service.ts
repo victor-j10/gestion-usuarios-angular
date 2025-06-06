@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 export interface User {
   id: number;
@@ -17,11 +18,15 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<User[]>{
-    return this.http.get<User[]>(this.API_URL);
+  getUsers(): Observable<User[]> {
+    return this.http.get<{ users: User[] }>('assets/db.json').pipe(
+      map(response => response.users)
+    );
   }
 
-  getUserById(id: number): Observable<User> {
-    return this.http.get<User>(`${this.API_URL}/${id}`);
+  getUserById(id: number): Observable<User | undefined> {
+    return this.getUsers().pipe(
+      map(users => users.find(user => user.id === id))
+    );
   }
 }

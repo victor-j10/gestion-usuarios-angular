@@ -19,18 +19,21 @@ export class LoginComponent {
   password = '';
   errorMessage = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
-  login(){
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(users => {
-      const user = users.find(u => u.username === this.username && u.password === this.password);
-      if(user){
+  login() {
+    this.http.get<{ users: any[] }>('assets/db.json').subscribe(data => {
+      const user = data.users.find(
+        u => u.username === this.username && u.password === this.password
+      );
+      if (user) {
         localStorage.setItem('user', JSON.stringify(user));
         this.router.navigate(['/users']);
       } else {
-        this.errorMessage = 'Credenciales inválidas'
+        this.errorMessage = 'Credenciales inválidas';
       }
     });
   }
+
 
 }
