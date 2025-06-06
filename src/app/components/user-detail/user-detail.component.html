@@ -1,20 +1,27 @@
-<div *ngIf="notFound">
-  <p class="error" style="text-align: center; color: black;">Usuario no encontrado</p>
+<div *ngIf="loading" class="loading-container">
+  <mat-spinner diameter="40"></mat-spinner>
 </div>
 
-<mat-card *ngIf="!notFound && user" class="user-detail-card">
-  <div class="header">
-    <h2 class="user-name">{{ user.name }}</h2>
-    <p class="subtitle">Detalles del usuario</p>
+
+<div *ngIf="!loading">
+  <div *ngIf="notFound">
+    <p class="error" style="text-align: center; color: black;">Usuario no encontrado</p>
   </div>
 
-  <div class="user-info">
-    <div class="info-item"><span>ID:</span> {{ user.id }}</div>
-    <div class="info-item"><span>Email:</span> {{ user.email }}</div>
-    <div class="info-item"><span>Rol:</span> {{ user.role }}</div>
-  </div>
+  <mat-card *ngIf="!notFound && user" class="user-detail-card">
+    <div class="header">
+      <h2 class="user-name">{{ user.name }}</h2>
+      <p class="subtitle">Detalles del usuario</p>
+    </div>
 
-  <div class="actions">
-    <button mat-raised-button color="primary" (click)="goBack()">← Volver</button>
-  </div>
-</mat-card>
+    <div class="user-info">
+      <div class="info-item"><span>ID:</span> {{ user.id }}</div>
+      <div class="info-item"><span>Email:</span> {{ user.email }}</div>
+      <div class="info-item"><span>Rol:</span> {{ user.role }}</div>
+    </div>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="goBack()">← Volver</button>
+    </div>
+  </mat-card>
+</div>

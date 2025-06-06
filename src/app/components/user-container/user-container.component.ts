@@ -18,17 +18,21 @@ export class UserContainerComponent {
 
   constructor(private router: Router) { }
 
+  //se obtienen los datos de la sesión para ser usados
+  //esto lo hice para poder mostrar el nombre del usuario en la sesión
   ngOnInit(): void {
     const userString = localStorage.getItem('user');
     const users = userString ? JSON.parse(userString) : null;
     this.user = users;
   }
 
+  //método logout para remover los datos del localstorage y enviar al usuario de vuelva al login
   logout() {
     localStorage.removeItem('user');
     this.router.navigate(['/']);
   }
 
+  //botón para ir a la vista users
   home(){
     this.router.navigate(['/users']);
   }
