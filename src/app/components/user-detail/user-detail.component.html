@@ -1,8 +1,10 @@
+<!--Se válida si la petición todavía no se ha resuelto, mientras sea true mostrará el
+snipper-->
 <div *ngIf="loading" class="loading-container">
   <mat-spinner diameter="40"></mat-spinner>
 </div>
 
-
+<!--Mientras sea false mostrará la vista con el detalle-->
 <div *ngIf="!loading">
   <div *ngIf="notFound">
     <p class="error" style="text-align: center; color: black;">Usuario no encontrado</p>
